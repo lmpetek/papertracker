@@ -5,7 +5,7 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 
 gem 'devise'
 gem 'cancan'
@@ -22,6 +22,33 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development, :test do
+  # design depends
+  gem 'hpricot'
+  #gem 'ruby_parser' # error despues de actualizar con bundle
+  # documentation
+  gem 'annotate'
+  # testing
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'capybara'
+  gem 'guard-rspec'
+  #gem 'test-unit' # para sacar
+  gem "webrat", ">= 0.7.3" # para sacar
+  # For documentation (rdoc). See: http://yardoc.org/
+  gem 'yard'
+  gem 'redcarpet'
+end
+
+group :production do
+  gem 'dalli'
+  gem 'thin'
+
+
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
