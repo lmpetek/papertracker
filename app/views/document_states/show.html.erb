@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @document_state.name %>
+</p>
+
+<p>
+  <b>Document state prev:</b>
+  <%= @document_state.document_state_prev_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_state_path(@document_state) %> |
+<%= link_to 'Back', document_states_path %>

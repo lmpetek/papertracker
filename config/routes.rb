@@ -1,4 +1,7 @@
 Papertracker::Application.routes.draw do
+  resources :document_states
+
+
   resources :documents
 
   resources :document_types
