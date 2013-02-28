@@ -7,7 +7,7 @@
 
 <p>
   <b>Document state prev:</b>
-  <%= @document_state.document_state_prev_id %>
+  <%= @document_state.document_state_prev.try(:name) %>
 </p>
 
 
